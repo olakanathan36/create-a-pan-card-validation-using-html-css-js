@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan card</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>PAN Card Validation</h2>
+    <div class="main">
+        <div class="conatiner">
+            <form action="">
+                <label for="">PAN Card No:</label>
+                <input type="text" name="" id="pan">
+                <input type="submit" id="input" onclick="submit()">
+
+            </form>
+        </div>
+        <div class="conatainer2">
+        </div>
+    </div>
+    <script>
+        function submit(){
+            const input=document.querySelector('#pan')
+                const v=input.value.trim();
+                const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+                if v==''{
+                    alert('Please enter PAN Card No');
+                }
+                if (panRegex.test(v)) {
+                    alert("PAN Card No is valid");
+                } else {
+                    alert("PAN Card No is invalid");
+                }
+        }
+            
+        
+    
+    </script>
+</body>
+</html>
